@@ -1,12 +1,14 @@
 <template>
-  <nav>
-    <router-link :to="{ name: 'EventList' }">Events</router-link> |
-    <router-link :to="{ name: 'AboutView' }">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <div id="nav">
+      <router-link :to="{ name: 'EventList' }">Events</router-link> |
+      <router-link :to="{ name: 'AboutView' }">About</router-link>
+    </div>
+    <router-view />
+  </div>
 </template>
 
-<style lang="scss">
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,23 +17,20 @@
   color: #2c3e50;
 }
 
-nav {
+#nav {
   padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 
-.event {
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
 
-  h2 {
-    font-size: 1.25rem;
-  }
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+h4 {
+  font-size: 20px;
 }
 </style>
